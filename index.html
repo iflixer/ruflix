@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>Runetflix</title>
+    <meta name="description" content="Лучшие фильмы и сериалы">
+    <!--
+    <meta property="og:title" content="{{.Meta.Seo.Title|html}}">
+    <meta property="og:type" content="{{.Meta.Seo.Type}}">
+    <meta property="og:url" content="{{.Meta.SiteURL|url}}">
+    <meta property="og:image" content="{{.Meta.Seo.Image|url}}">
+    <meta property="og:image:alt" content="{{.Meta.Seo.Title|html}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png?{{antiCache}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png?{{antiCache}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png?{{antiCache}}">
+    <link rel="manifest" href="/webmanifest.json">
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content="/assets/icons/icon-512x512.png?{{antiCache}}" />
+    <meta name="twitter:image" content="/assets/icons/icon-512x512.png?{{antiCache}}" />
+    <link rel="canonical" href="{{.Meta.Canonical|url}}">-->
+    <link rel="icon" sizes="67x67" href="assets/img/favicon.svg">
+    <link href="assets/css/critical.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="wrapper wide-big">
+        <div class="hlp">
+            <div class="header-logo">
+                <a href="#" rel="home"><img src="assets/img/logo-runetflix.svg"
+                                            alt="Runetflix"
+                                            title="Runetflix" width="185" height="48"></a>
+            </div>
+
+
+            <div class="main-menu-wrap">
+                <ul class="header-menu">
+                    <li class="menu-item active"><a href="index.html">Главная</a></li>
+                    <li class="menu-item"><a href="list.html#series">Сериалы</a></li>
+                    <li class="menu-item"><a href="list.html#movies">Фильмы</a></li>
+                    <li class="menu-item"><a href="list.html#popular">Популярное</a></li>
+                    <li class="menu-item"><a href="list.html#mylist">Избранное</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hls">
+            <div id="pm-top-search">
+                <form action="/search" method="get" id="search" name="search">
+
+                        <input class="form-control" id="pm-search" size="16" name="keywords" type="text"
+                               placeholder="Поиск ..."
+                               onblur="fill();" autocomplete="off">
+
+					<button class="btn btn-default" aria-label="search" type="submit"><i
+                            class="icon-search"></i></button>
+	            </form>
+            </div>
+            <div class="search-mobile"><i class="icon-search"></i></div>
+            <a class="link-standalone" href="#forkids">Для детей</a>
+            <a href="#" id="navslide-toggle"><span></span></a>
+        </div>
+    </div>
+</header>
+
+
+<div class="wrapper underhead">
+    <div class="generic-slider featured" id="slider-1" data-auto="0" data-nav="0" data-dots="true" data-scheme="0">
+        <div class="slider-item bgcover" style="background-image: url(assets/img/posters/kalmar_hor.jpg)">
+            <div class="wrapper wide-big">
+                <div class="slide-content">
+                    <h2 class="title bold xxl acc">Игра в кальмара</h2>
+                    <div class="txxl">
+                        <p> Из-за нужды в деньгах сотни игроков принимают странное приглашение поучаствовать в детских соревнованиях. Их ждет заманчивый приз, но ставки смертельно высоки.</p>
+
+                    </div>
+                    <div class="flexy-left slidebuttons">
+                        <a href="squid.html#watch" class="btn">Смотреть</a>
+                        <a href="#fav" class="btn inverse">В избранное</a>
+                    </div>
+                </div>
+            </div>
+            <div class="agebadge">18+</div>
+        </div>
+        <div class="slider-item bgcover" style="background-image: url(assets/img/posters/silo_hor.jpg)">
+            <div class="wrapper wide-big">
+                <div class="slide-content">
+                    <h2 class="title bold xxl acc">Укрытие</h2>
+                    <div class="txxl">
+                        <p>В жизни нужна цель, во имя которой можно умереть.</p>
+                        <p>На отравленной гибнущей планете будущего тысячи людей ютятся в огромном подземном укрытии. Нарушение шерифом основного правила и серия загадочных смертей вынуждают инженера Джульетту заняться раскрытием тайн и поиском правды о бункере.</p>
+
+                    </div>
+                    <div class="flexy-left slidebuttons">
+                        <a href="silo.html#watch" class="btn">Смотреть</a>
+                        <a href="#fav" class="btn inverse">В избранное</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="slider-item bgcover" style="background-image: url(assets/img/posters/substanse2.jpg)">
+            <div class="wrapper wide-big">
+                <div class="slide-content">
+                    <h2 class="title bold xxl acc">Субстанция</h2>
+                    <div class="txxl">
+                        <p>Слава голливудской звезды Элизабет Спаркл осталась в прошлом, хотя она всё ещё ведёт
+                            фитнес-шоу
+                            на телевидении. Когда её передачу собираются перезапустить с ведущей помоложе, от отчаяния
+                            Элизабет решает принять инновационный препарат, создатели которого обещают невероятное
+                            преображение, но при соблюдении правила одной недели. Так на свет появляется молодая
+                            красотка
+                            Сью. Девушка начинает делать карьеру в шоу-бизнесе и вскоре решает, что семи дней ей
+                            маловато.</p>
+                    </div>
+                    <div class="flexy-left slidebuttons">
+                        <a href="substance.html#watch" class="btn">Смотреть</a>
+                        <a href="#fav" class="btn inverse">В избранное</a>
+                    </div>
+                </div>
+            </div>
+            <div class="agebadge">18+</div>
+        </div>
+        <div class="slider-item bgcover" style="background-image: url(assets/img/posters/dex1.jpg)">
+            <div class="wrapper wide-big">
+                <div class="slide-content">
+                    <h2 class="title bold xxl acc">DEXTER</h2>
+                    <div class="txxl">
+                        <p> Я — Декстер. Декстер Морган. Я работаю судмедэкспертом в полиции Майами. Я не понимаю любви,
+                            мне безразличен секс, и у меня нет чувств. А еще я серийный убийца.</p>
+                        <p>
+                            Мой отец был полицейским и прекрасно обучил меня прятать улики. Обычным гражданам не стоит
+                            меня бояться, я убиваю только преступников, подонков, до которых почему-либо не смогла или
+                            не захотела добраться полиция. Я убиваю их, аккуратно распиливаю на части и избавляюсь от
+                            трупов. Убийство для меня — творческий акт, искусство.
+                        </p>
+                    </div>
+                    <div class="flexy-left slidebuttons">
+                        <a href="dexter.html#watch" class="btn">Смотреть</a>
+                        <a href="#fav" class="btn inverse">В избранное</a>
+                    </div>
+                </div>
+            </div>
+            <div class="agebadge">18+</div>
+        </div>
+        <div class="slider-item bgcover" style="background-image: url(assets/img/posters/lucik_hor.jpg)">
+            <div class="wrapper wide-big">
+                <div class="slide-content">
+                    <h2 class="title bold xxl acc">Люцифер</h2>
+                    <div class="txxl">
+                        <p>Хорошо быть плохим.</p>
+                        <p>«Скучно в аду? Развлекусь в Городе ангелов!» — решает Сатана и отправляется на Землю. Он открывает ночной клуб и знакомится с женщиной-детективом из убойного отдела.</p>
+
+                    </div>
+                    <div class="flexy-left slidebuttons">
+                        <a href="serie.html#watch" class="btn">Смотреть</a>
+                        <a href="#fav" class="btn inverse">В избранное</a>
+                    </div>
+                </div>
+            </div>
+            <div class="agebadge">18+</div>
+        </div>
+        <div class="slider-item bgcover" style="background-image: url(assets/img/posters/mertv_hor.jpg)">
+            <div class="wrapper wide-big">
+                <div class="slide-content">
+                    <h2 class="title bold xxl acc">Ходячие мертвецы</h2>
+                    <div class="txxl">
+                        <p>Сражайтесь с мертвецами. Бойтесь живых</p>
+                        <p>Сериал рассказывает историю жизни семьи шерифа после того, как «зомби» — эпидемия апокалиптических масштабов захлестнула земной шар. Шериф Рик Граймс путешествует со своей семьей и небольшой группой выживших в поисках безопасного места для жизни. Но постоянный страх смерти каждый день приносит тяжелые потери, заставляя героев почувствовать глубины человеческой жестокости. Рик пытается спасти свою семью, и открывает для себя, что всепоглощающий страх тех, кто выжил, может быть опаснее бессмысленных мертвецов, бродящих по земле.</p>
+
+                    </div>
+                    <div class="flexy-left slidebuttons">
+                        <a href="serie.html#watch" class="btn">Смотреть</a>
+                        <a href="#fav" class="btn inverse">В избранное</a>
+                    </div>
+                </div>
+            </div>
+            <div class="agebadge">18+</div>
+        </div>
+        <div class="slider-item bgcover" style="background-image: url(assets/img/posters/doctor_hor.jpg)">
+            <div class="wrapper wide-big">
+                <div class="slide-content">
+                    <h2 class="title bold xxl acc">Хороший доктор</h2>
+                    <div class="txxl">
+                        <p>Его разум - тайна, его методы - чудо</p>
+                        <p>История молодого талантливого врача с синдромом саванта, обладающего уникальными способностями — невероятной памятью и фантастической чувствительностью к проблемам, вспыхивающим внутри человеческого организма. Герой становится блестящим хирургом, несмотря на то, в личностном плане его развитие соответствует развитию десятилетнего ребёнка...</p>
+
+                    </div>
+                    <div class="flexy-left slidebuttons">
+                        <a href="serie.html#watch" class="btn">Смотреть</a>
+                        <a href="#fav" class="btn inverse">В избранное</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="slider-item bgcover" style="background-image: url(assets/img/posters/Arcane_hor.jpg)">
+            <div class="wrapper wide-big">
+                <div class="slide-content">
+                    <h2 class="title bold xxl acc">Аркейн</h2>
+                    <div class="txxl">
+                        <p>У Каждой Легенды Есть Начало</p>
+                        <p>В условиях глубоких разногласий между городами-близнецами, Пилтовером и Зауном, две сестры оказываются по разные стороны баррикад в войне технологий и убеждений.</p>
+
+                    </div>
+                    <div class="flexy-left slidebuttons">
+                        <a href="serie.html#watch" class="btn">Смотреть</a>
+                        <a href="#fav" class="btn inverse">В избранное</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="slider-item bgcover" style="background-image: url(assets/img/posters/vikingi_hor.jpg)">
+            <div class="wrapper wide-big">
+                <div class="slide-content">
+                    <h2 class="title bold xxl acc">Викинги</h2>
+                    <div class="txxl">
+                        <p>Сериал рассказывает об отряде викингов Рагнара Лодброка. Он восстал, чтобы стать королём племён викингов. Норвежская легенда гласит, что он был прямым потомком Одина, бога войны и воинов.</p>
+                    </div>
+                    <div class="flexy-left slidebuttons">
+                        <a href="serie.html#watch" class="btn">Смотреть</a>
+                        <a href="#fav" class="btn inverse">В избранное</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="slider-item bgcover" style="background-image: url(assets/img/posters/rookie_hor.jpg)">
+            <div class="wrapper wide-big">
+                <div class="slide-content">
+                    <h2 class="title bold xxl acc">Новобранец</h2>
+                    <div class="txxl">
+                        <p>Never off duty.</p>
+                        <p>Начинать с чистого листа всегда нелегко, особенно для уроженца маленького городка Джона Нолана, который после инцидента, перевернувшего его жизнь, решил воплотить в жизнь давнюю мечту и присоединиться к полиции Лос-Анджелеса. Возрастного новичка встречают с понятным скептицизмом, однако жизненный опыт, упорство и чувство юмора дают Джону преимущество.</p>
+
+                    </div>
+                    <div class="flexy-left slidebuttons">
+                        <a href="serie.html#watch" class="btn">Смотреть</a>
+                        <a href="#fav" class="btn inverse">В избранное</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="dodots"></div>
+    </div>
+</div>
+
+
+<div class="wrapper wide-big">
+    <div class="slidercontainer main-new">
+        <div class="wrapper">
+            <div class="section-header">
+                <h2 class="pm-section-head">Новинки</h2>
+                <div class="nav-custom">
+                    <button class="prev-btn sm" aria-label="previous" data-slider="2"></button>
+                    <div class="dodots"></div>
+                    <button class="next-btn sm" aria-label="next" data-slider="2"></button>
+                </div>
+            </div>
+        </div>
+        <div class="generic-slider" id="slider-2" data-nav="1" data-dots="true" data-scheme="2">
+
+            <div class="slider-item">
+                <a href="kraven.html" title="Movie title 1">
+                    <div class="item-info">
+                        <h3 class="item-title title">Крэйвен-охотник</h3>
+                    </div>
+                    <div class="posterframe">
+                        <div class="tbadge">Недавно добавлено</div>
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/kraven/kraven_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/kraven/kraven_hor_text.jpg" />
+                            <img src="assets/img/posters/kraven/kraven_vert.jpg" alt="Крэйвен-охотник" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="gladiator2.html" title="Movie title 2">
+                   <div class="item-info">
+                        <h3 class="item-title title">Гладиатор 2</h3>
+                    </div>
+                    <div class="posterframe">
+                        <div class="flagbadge"><span>top</span><p>10</p></div>
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/gladiator2/glad_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/gladiator2/glad_hor_text.webp" />
+                            <img src="assets/img/posters/gladiator2/glad_vert.jpg" alt="Гладиатор 2" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="dirty.html" title="Movie title 2">
+                    <div class="item-info">
+                        <h3 class="item-title title">Грязные ангелы</h3>
+                    </div>
+                    <div class="posterframe">
+                        <div class="flagbadge"><span>top</span><p>10</p></div>
+
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/dirtya/dirty_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/dirtya/dirty_hor_text.webp" />
+                            <img src="assets/img/posters/dirtya/dirty_vert.jpg" alt="Грязные ангелы" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="redone.html" title="Movie title 4">
+                    <div class="item-info">
+                        <h3 class="item-title title">Миссия: Красный</h3>
+                    </div>
+                    <div class="posterframe">
+                        <div class="flagbadge"><span>top</span><p>10</p></div>
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/redone/redone_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/redone/redone_hor_text.jpg" />
+                            <img src="assets/img/posters/redone/redone_vert.jpg" alt="Миссия: Красный" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Ручная кладь">
+                   <div class="item-info">
+                        <h3 class="item-title title">Ручная кладь</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/carryon/carry_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/carryon/carry_hor_text.jpg" />
+                            <img src="assets/img/posters/carryon/carry_vert.jpg" alt="Ручная кладь" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Movie title 6">
+                    <div class="item-info">
+                        <h3 class="item-title title">Стань вирусным</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/viral/viral_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/viral/viral_hor.jpg" />
+                            <img src="assets/img/posters/viral/viral_vert.jpg" alt="Стань вирусным" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Movie title 7">
+                    <div class="item-info">
+                        <h3 class="item-title title">Злая: Сказка о ведьме Запада</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/wicked/wicked_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/wicked/wicked_hor_text.jpg" />
+                            <img src="assets/img/posters/wicked/wicked_vert.jpg" alt="Злая: Сказка о ведьме Запада" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="slidercontainer main-highlights">
+        <div class="wrapper">
+            <div class="section-header">
+                <h2 class="pm-section-head">Выбор зрителей</h2>
+                <div class="nav-custom">
+                    <button class="prev-btn sm" aria-label="previous" data-slider="3"></button>
+                    <div class="dodots"></div>
+                    <button class="next-btn sm" aria-label="next" data-slider="3"></button>
+                </div>
+            </div>
+        </div>
+        <div class="generic-slider vert-special" id="slider-3" data-nav="1" data-dots="true" data-scheme="1" data-infinity="0">
+            <div class="slider-item">
+                <a href="squid.html" title="Movie title 5">
+                    <div class="item-info">
+                        <h3 class="item-title title">Игра в кальмара</h3>
+                    </div>
+                    <div class="posterframe"><img src="assets/img/posters/kalmar_vert.jpg" alt="Film title">
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="silo.html" title="Movie title 2">
+                    <div class="item-info">
+                        <h3 class="item-title title">Укрытие</h3>
+
+                    </div>
+                    <div class="posterframe">
+                        <div class="flagbadge"><span>top</span><p>10</p></div>
+                        <img src="assets/img/posters/sg2.webp" alt="Film title">
+                        <div class="bbadge">Недавно добавлено</div>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="substance.html" title="Movie title 1">
+                    <div class="item-info">
+                        <h3 class="item-title title">Субстанция</h3>
+                    </div>
+                    <div class="posterframe">
+                        <div class="flagbadge"><span>top</span><p>10</p></div>
+                        <img src="assets/img/posters/sg1.webp" alt="Субстанция">
+                    </div>
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="dexter.html" title="Декстер">
+                    <div class="item-info">
+                        <h3 class="item-title title">Декстер</h3>
+                    </div>
+                    <div class="posterframe"><img src="assets/img/posters/sg9.webp" alt="Film title">
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="serie.html" title="Викинги">
+                    <div class="item-info">
+                        <h3 class="item-title title">Викинги</h3>
+                    </div>
+                    <div class="posterframe"><img src="assets/img/posters/vikingi_vert.jpg" alt="Film title">
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="serie.html" title="Ходячие мертвецы">
+                    <div class="item-info">
+                        <h3 class="item-title title">Ходячие мертвецы</h3>
+                    </div>
+                    <div class="posterframe"><img src="assets/img/posters/mertv_vert.jpg" alt="Film title">
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="serie.html" title="Хороший доктор">
+                    <div class="item-info">
+                        <h3 class="item-title title">Хороший доктор</h3>
+                    </div>
+                    <div class="posterframe"><img src="assets/img/posters/doctor_vert.jpg" alt="Film title">
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="serie.html" title="Люцифер">
+                    <div class="item-info">
+                        <h3 class="item-title title">Люцифер</h3>
+                    </div>
+                    <div class="posterframe"><img src="assets/img/posters/lucik_vert.jpg" alt="Film title">
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="serie.html" title="Аркейн">
+                    <div class="item-info">
+                        <h3 class="item-title title">Аркейн</h3>
+                    </div>
+                    <div class="posterframe"><img src="assets/img/posters/Arcane_vert.jpg" alt="Film title">
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="serie.html" title="Movie title 10">
+                    <div class="item-info">
+                        <h3 class="item-title title">Новобранец</h3>
+                    </div>
+                    <div class="posterframe"><img src="assets/img/posters/rookie_vert.jpg" alt="Film title">
+                    </div>
+
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="slidercontainer main-cat">
+        <div class="wrapper">
+            <div class="section-header">
+                <h2 class="pm-section-head">Сейчас смотрят</h2>
+                <div class="nav-custom">
+                    <a href="#section" class="moball">Все</a>
+                    <button class="prev-btn sm" aria-label="previous" data-slider="4"></button>
+                    <div class="dodots"></div>
+                    <button class="next-btn sm" aria-label="next" data-slider="4"></button>
+                </div>
+            </div>
+        </div>
+        <div class="generic-slider" id="slider-4" data-nav="1" data-dots="true" data-scheme="2">
+            <div class="slider-item">
+                <a href="serie.html" title="Movie title 1">
+                    <div class="item-info">
+                        <h3 class="item-title title">Острые козырьки</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/picky/picky_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/picky/picky_hor_text.jpg" />
+                            <img src="assets/img/posters/picky/picky_vert.jpg" alt="Острые козырьки" />
+                        </picture>
+                     </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Movie title 2">
+                    <div class="item-info">
+                        <h3 class="item-title title">Охота на воров 2: Пантера</h3>
+
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/ohotana/ohota_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/ohotana/ohota_hor_text.jpg" />
+                            <img src="assets/img/posters/ohotana/ohota_vert.jpg" alt="Охота на воров 2: Пантера" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Мегалополис">
+                    <div class="item-info">
+                        <h3 class="item-title title">Мегалополис</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/megapolis/mega_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/megapolis/mega_hor_text.jpg" />
+                            <img src="assets/img/posters/megapolis/mega_vert.jpg" alt="Мегалополис" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Волшебник Изумрудного города. Дорога из желтого кирпича">
+                    <div class="item-info">
+                        <h3 class="item-title title">Волшебник Изумрудного города. Дорога из желтого кирпича</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/wizard/vizard_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/wizard/vizard_hor.jpg" />
+                            <img src="assets/img/posters/wizard/vizard_vert.jpg" alt="Волшебник Изумрудного города. Дорога из желтого кирпича" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Вульфмен">
+                    <div class="item-info">
+                        <h3 class="item-title title">Вульфмен</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/wolfman/wolf_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/wolfman/wolf_hor_text.jpg" />
+                            <img src="assets/img/posters/wolfman/wolf_vert.jpg" alt="Вульфмен" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Веном: Последний танец">
+                    <div class="item-info">
+                        <h3 class="item-title title">Веном: Последний танец</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/venom/venom_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/venom/venom_hor_text.jpg" />
+                            <img src="assets/img/posters/venom/venom_vert.jpg" alt="Веном: Последний танец" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Профессионал">
+                    <div class="item-info">
+                        <h3 class="item-title title">Профессионал</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/profi/profi_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/profi/profi_hor_text.jpg" />
+                            <img src="assets/img/posters/profi/profi_vert.jpg" alt="Профессионал" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="slidercontainer main-cat">
+        <div class="wrapper">
+            <div class="section-header">
+                <h2 class="pm-section-head">Комедии</h2>
+                <div class="nav-custom">
+                    <a href="#section" class="moball">Все</a>
+                    <button class="prev-btn sm" aria-label="previous" data-slider="5"></button>
+                    <div class="dodots"></div>
+                    <button class="next-btn sm" aria-label="next" data-slider="5"></button>
+                </div>
+            </div>
+        </div>
+        <div class="generic-slider" id="slider-5" data-nav="1" data-dots="true" data-scheme="2">
+            <div class="slider-item">
+                <a href="single.html" title="Дэдпул и Росомаха">
+                    <div class="item-info">
+                        <h3 class="item-title title">Дэдпул и Росомаха</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/deadpool/dead_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/deadpool/dead_hor_text.jpg" />
+                            <img src="assets/img/posters/deadpool/dead_vert.jpg" alt="Дэдпул и Росомаха" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Плохие парни до Конца">
+                    <div class="item-info">
+                        <h3 class="item-title title">Плохие парни до Конца</h3>
+
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/badboys/bad_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/badboys/bad_hor_text.jpg" />
+                            <img src="assets/img/posters/badboys/bad_vert.jpg" alt="Плохие парни до Конца" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Каскадёры">
+                    <div class="item-info">
+                        <h3 class="item-title title">Каскадёры</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/kaskaderi/kaska_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/kaskaderi/kaska_hor_text.jpg" />
+                            <img src="assets/img/posters/kaskaderi/kaska_vert.jpg" alt="Каскадёры" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Бордерлендс">
+                    <div class="item-info">
+                        <h3 class="item-title title">Бордерлендс</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/border/border_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/border/border_hor_text.jpg" />
+                            <img src="assets/img/posters/border/border_vert.jpg" alt="Бордерлендс" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Битлджус Битлджус">
+                    <div class="item-info">
+                        <h3 class="item-title title">Битлджус Битлджус</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/bittlejuice/bit_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/bittlejuice/bit_hor_text.jpg" />
+                            <img src="assets/img/posters/bittlejuice/bit_vert.jpg" alt="Битлджус Битлджус" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Однажды в… Голливуде">
+                    <div class="item-info">
+                        <h3 class="item-title title">Однажды в… Голливуде</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/holly/holly_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/holly/holly_hor_text.jpg" />
+                            <img src="assets/img/posters/holly/holly_vert.jpg" alt="Однажды в… Голливуде" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Барби">
+                    <div class="item-info">
+                        <h3 class="item-title title">Барби</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/barbie/barbie_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/barbie/barbie_hor_text.jpg" />
+                            <img src="assets/img/posters/barbie/barbie_vert.jpg" alt="Барби" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="slidercontainer main-cat">
+        <div class="wrapper">
+            <div class="section-header">
+                <h2 class="pm-section-head">Лучшие сериалы</h2>
+                <div class="nav-custom">
+                    <a href="#section" class="moball">Все</a>
+                    <button class="prev-btn sm" aria-label="previous" data-slider="6"></button>
+                    <div class="dodots"></div>
+                    <button class="next-btn sm" aria-label="next" data-slider="6"></button>
+                </div>
+            </div>
+        </div>
+        <div class="generic-slider" id="slider-6" data-nav="1" data-dots="true" data-scheme="2">
+            <div class="slider-item">
+                <a href="serie.html" title="Во все тяжкие">
+                    <div class="item-info">
+                        <h3 class="item-title title">Во все тяжкие</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/bb/bb_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/bb/bb_hor_text.jpg" />
+                            <img src="assets/img/posters/bb/bb_vert.jpg" alt="Во все тяжкие" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="serie.html" title="Игра Престолов">
+                    <div class="item-info">
+                        <h3 class="item-title title">Игра Престолов</h3>
+
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/got/got_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/got/got_hor_text.jpg" />
+                            <img src="assets/img/posters/got/got_vert.jpg" alt="Игра Престолов" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="serie.html" title="Чернобыль">
+                    <div class="item-info">
+                        <h3 class="item-title title">Чернобыль</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/chernobyl/ch_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/chernobyl/ch_hor_text.jpg" />
+                            <img src="assets/img/posters/chernobyl/ch_vert.jpg" alt="Чернобыль" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="serie.html" title="Фоллаут">
+                    <div class="item-info">
+                        <h3 class="item-title title">Фоллаут</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/fallout/fall_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/fallout/fall_hor_text.jpg" />
+                            <img src="assets/img/posters/fallout/fall_vert.jpg" alt="Фоллаут" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="serie.html" title="Задача трех тел">
+                    <div class="item-info">
+                        <h3 class="item-title title">Задача трех тел</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/3body/body_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/3body/body_hor_text.jpg" />
+                            <img src="assets/img/posters/3body/body_vert.jpg" alt="Задача трех тел" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="serie.html" title="Лучше звоните Солу">
+                    <div class="item-info">
+                        <h3 class="item-title title">Лучше звоните Солу</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/saul/saul_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/saul/saul_hor_text.jpg" />
+                            <img src="assets/img/posters/saul/saul_vert.jpg" alt="Лучше звоните Солу" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="serie.html" title="Прослушка">
+                    <div class="item-info">
+                        <h3 class="item-title title">Прослушка</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/wire/wire_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/wire/wire_hor_text.jpg" />
+                            <img src="assets/img/posters/wire/wire_vert.jpg" alt="Прослушка" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="slidercontainer main-cat" id="forkids">
+        <div class="wrapper">
+            <div class="section-header">
+                <h2 class="pm-section-head">Для детей</h2>
+                <div class="nav-custom">
+                    <a href="#section" class="moball">Все</a>
+                    <button class="prev-btn sm" aria-label="previous" data-slider="7"></button>
+                    <div class="dodots"></div>
+                    <button class="next-btn sm" aria-label="next" data-slider="7"></button>
+                </div>
+            </div>
+        </div>
+        <div class="generic-slider" id="slider-7" data-nav="1" data-dots="true" data-scheme="2">
+            <div class="slider-item">
+                <a href="single.html" title="Дикий Робот">
+                    <div class="item-info">
+                        <h3 class="item-title title">Дикий Робот</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/drobot/robo_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/drobot/robo_hor_text.jpg" />
+                            <img src="assets/img/posters/drobot/robo_vert.jpg" alt="Дикий Робот" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Кунг-фу Панда 4">
+                    <div class="item-info">
+                        <h3 class="item-title title">Кунг-фу Панда 4</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/kf4/kf_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/kf4/kf_hor_text.jpg" />
+                            <img src="assets/img/posters/kf4/kf_vert.jpg" alt="Кунг-фу Панда 4" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Муфаса: Король Лев">
+                    <div class="item-info">
+                        <h3 class="item-title title">Муфаса: Король Лев</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/mufasa/mufasa_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/mufasa/mufasa_hor_text.jpg" />
+                            <img src="assets/img/posters/mufasa/mufasa_vert.jpg" alt="Муфаса: Король Лев" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Моана 2 ">
+                    <div class="item-info">
+                        <h3 class="item-title title">Моана 2 </h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/moana/moana_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/moana/moana_hor_text.jpg" />
+                            <img src="assets/img/posters/moana/moana_vert.jpg" alt="Моана 2 " />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Гадкий я 4">
+                    <div class="item-info">
+                        <h3 class="item-title title">Гадкий я 4</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/disme/dis_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/disme/dis_hor_text.jpg" />
+                            <img src="assets/img/posters/disme/dis_vert.jpg" alt="Гадкий я 4" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Головоломка 2">
+                    <div class="item-info">
+                        <h3 class="item-title title">Головоломка 2</h3>
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/golovolom/g_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/golovolom/g_hor_text.jpg" />
+                            <img src="assets/img/posters/golovolom/g_vert.jpg" alt="Головоломка 2" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+            <div class="slider-item">
+                <a href="single.html" title="Соник 3 в Кино">
+                    <div class="item-info">
+                        <h3 class="item-title title">Соник 3 в Кино</h3>
+
+                    </div>
+                    <div class="posterframe">
+                        <picture>
+                            <source media="(max-width: 620px)" srcset="assets/img/posters/sonic3/sonic_vert.jpg" />
+                            <source media="(min-width: 621px)" srcset="assets/img/posters/sonic3/sonic_hor_text.jpg" />
+                            <img src="assets/img/posters/sonic3/sonic_vert.jpg" alt="Соник 3 в Кино" />
+                        </picture>
+                    </div>
+
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="wrapper main-footer">
+        <p>Вопросы? <a href="/contact">Свяжитесь с нами.</a></p>
+        <div class="flexy-space">
+            <div class="col-footer">
+                <a href="#">Часто задаваемые вопросы (FAQ)</a>
+                <a href="#">Связь с инвесторами</a>
+                <a href="#">Конфиденциальность</a>
+                <a href="#">Тест скорости</a>
+            </div>
+            <div class="col-footer">
+                <a href="#">Центр помощи</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Настройки файлов cookie</a>
+                <a href="#">Юридические уведомления</a>
+            </div>
+            <div class="col-footer">
+                <a href="#">Аккаунт</a>
+                <a href="#">Способы просмотра</a>
+                <a href="#">Корпоративная информация</a>
+                <a href="#">Только на Runetflix</a>
+            </div>
+            <div class="col-footer">
+                <a href="#">Медиацентр</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Связаться с нами</a>
+            </div>
+        </div>
+            <div class="langselector">
+            <form>
+                <select>
+                    <option value="ru">Русский</option>
+
+                </select>
+            </form>
+        </div>
+        <p class="copyright">Runetflix Global</p>
+    </div>
+</footer>
+</body>
+<link href="assets/css/slick.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/app.js?ac=1"></script>
+</html>

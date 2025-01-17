@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>{{.Meta.Title|html}}</title>
+    <meta name="description" content="{{.Meta.Seo.Description|html}}">
+    <!--
+    <meta property="og:title" content="{{.Meta.Seo.Title|html}}">
+    <meta property="og:type" content="{{.Meta.Seo.Type}}">
+    <meta property="og:url" content="{{.Meta.SiteURL|url}}">
+    <meta property="og:image" content="{{.Meta.Seo.Image|url}}">
+    <meta property="og:image:alt" content="{{.Meta.Seo.Title|html}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png?{{antiCache}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png?{{antiCache}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png?{{antiCache}}">
+    <link rel="manifest" href="/webmanifest.json">
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content="/assets/icons/icon-512x512.png?{{antiCache}}" />
+    <meta name="twitter:image" content="/assets/icons/icon-512x512.png?{{antiCache}}" />
+    <link rel="canonical" href="{{.Meta.Canonical|url}}">-->
+    <link rel="icon" sizes="67x67" href="assets/img/favicon.svg">
+    <link href="assets/css/critical.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="wrapper wide-big">
+        <div class="hlp">
+            <div class="header-logo">
+                <a href="index.html" rel="home"><img src="assets/img/logo-runetflix.svg"
+                                                     alt="Runetflix"
+                                                     title="Runetflix" width="185" height="48"></a>
+            </div>
+
+
+            <div class="main-menu-wrap">
+                <ul class="header-menu">
+                    <li class="menu-item active"><a href="index.html">Главная</a></li>
+                    <li class="menu-item"><a href="list.html#series">Сериалы</a></li>
+                    <li class="menu-item"><a href="list.html#movies">Фильмы</a></li>
+                    <li class="menu-item"><a href="list.html#popular">Популярное</a></li>
+                    <li class="menu-item"><a href="list.html#mylist">Избранное</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hls">
+            <div id="pm-top-search">
+                <form action="/search" method="get" id="search" name="search">
+
+                    <input class="form-control" id="pm-search" size="16" name="keywords" type="text"
+                           placeholder="Поиск ..."
+                           onblur="fill();" autocomplete="off">
+
+                    <button class="btn btn-default" aria-label="search" type="submit"><i
+                            class="icon-search"></i></button>
+                </form>
+            </div>
+            <div class="search-mobile"><i class="icon-search"></i></div>
+            <a class="link-standalone" href="index.html#forkids">Для детей</a>
+            <a href="#" id="navslide-toggle"><span></span></a>
+        </div>
+    </div>
+</header>
+
+
+<div class="wrapper underhead">
+    <div class="generic-slider featured" id="slider-1" data-nav="0" data-dots="true" data-scheme="0">
+        <div class="slider-item bgcover" style="background-image: url(assets/img/posters/dex1.jpg)">
+            <div class="wrapper wide-big">
+                <div class="slide-content">
+                    <h2 class="title bold xxl acc">DEXTER</h2>
+                    <div class="txxl">
+                        <p> Я — Декстер. Декстер Морган. Я работаю судмедэкспертом в полиции Майами. Я не понимаю любви,
+                            мне безразличен секс, и у меня нет чувств. А еще я серийный убийца.</p>
+                        <p>
+                            Мой отец был полицейским и прекрасно обучил меня прятать улики. Обычным гражданам не стоит
+                            меня бояться, я убиваю только преступников, подонков, до которых почему-либо не смогла или
+                            не захотела добраться полиция. Я убиваю их, аккуратно распиливаю на части и избавляюсь от
+                            трупов. Убийство для меня — творческий акт, искусство.
+                        </p>
+                    </div>
+                    <div class="flexy-left slidebuttons">
+                        <a class="btn openplayer" href="#watch">Смотреть</a>
+                        <a class="btn inverse">В избранное</a>
+                    </div>
+                </div>
+            </div>
+            <div class="agebadge">18+</div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="wrapper wide-big movieplayer">
+    <div id="player"></div>
+</div>
+
+<div class="wrapper wide-big">
+    <div class="twocol">
+        <div class="seasonlist">
+            <div class="seasonhead">
+                <h2 class="pm-section-head">Эпизоды</h2>
+                <select class="seasondrop">
+                    <option value="#seasonlink" selected>Сезон 1</option>
+                    <option value="#seasonlink2">Сезон 2</option>
+                    <option value="#seasonlink3">Сезон 3</option>
+                </select>
+            </div>
+            <div class="epilist">
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">1</div>
+                    <div class="epi-poster"><img src="assets/img/posters/dexter/e1.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Декстер</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Декстер (Майкл Си Холл) — полицейский медик, специализирующийся на анализе крови после
+                            убийств. Он живёт двойной жизнью. Тайная сторона жизни Декстера — он серийный убийца. Он
+                            вершит свое правосудие — убивает преступников, которых не смогла наказать полиция.</p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">2</div>
+                    <div class="epi-poster"><img src="assets/img/posters/dexter/e2.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Крокодиловы слёзы</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>За двенадцать лет службы в полиции Декстер расследовал 2103 дела. Он появляется в здании суда
+                            и обращает внимание на семью жертвы, Александра Прайса, убитого Мэттью Чамберсом — он ехал
+                            пьяным и сбил парня. Мэттью оправдывают, Декстер же берёт его на заметку.</p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">3</div>
+                    <div class="epi-poster"><img src="assets/img/posters/dexter/e3.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Черри со льдом</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Декстер выбирает следующего преступника, которого ему предстоит убить. Это Джереми Даунс,
+                            молодой парень, отсидевший за убийство другого парня. Тогда ему было пятнадцать, а жертва
+                            была немного старше Джереми. Декстер говорит сам себе, что ему нужно собрать доказательства,
+                            обвести дату на календаре и ждать.</p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">4</div>
+                    <div class="epi-poster"><img src="assets/img/posters/dexter/e4.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Рука помощи</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>На месте преступления найдена отрезанная человеческая рука. Пока ещё Декстер не знает, дело
+                            ли это рук того убийцы на рефрижераторе, или нет. Убийца оставил полароидный снимок рядом с
+                            рукой — это послание от убийцы на рефрижераторе. Затем он приезжает на следующее место
+                            преступления — в этот раз обнаружена человеческая нога, также принадлежащая Тони Туччи.</p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">5</div>
+                    <div class="epi-poster"><img src="assets/img/posters/dexter/e5.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Любовь по-американски</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Рита узнаёт, что жених её коллеги, который незаконно иммигрировал с Кубы, пропал, и просит
+                            Декстера исследовать проблему, используя свои полицейские связи. Он расследует Хорхе
+                            Кастильо, владельца свалки, и узнаёт, что Кастильо убивает незаконно ввезённых иммигрантов,
+                            которые не могут заплатить за свою свободу.</p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">6</div>
+                    <div class="epi-poster"><img src="assets/img/posters/dexter/e6.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Вернуть отправителю</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Тело жены Кастильо возвращено со дна залива на место ее убийства. Декстеру снится страшный
+                            сон. Молодой кубинский мальчик стал свидетелем событий предыдущей новости, и Декстер
+                            отклоняет зацепки своих коллег, которые могли бы направить их к нему. В конечном счёте,
+                            Декстер подставляет мужа, чьё тело до сих пор не найдено, и связывает его с убийством его
+                            жены.</p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">7</div>
+                    <div class="epi-poster"><img src="assets/img/posters/dexter/e7.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Круг друзей</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Декстер стоит у забрызганной кровью стены и размахивает ножом, представляя себя на месте
+                            убийцы. Убитый — парень, редактор школьного ежегодника. Декстер замечает, что он видел
+                            подобные раны и раньше, но не рассказывает об этом сержанту Доаксу. Декстер вспоминает, где
+                            он видел такие же раны: это убийство — дело рук Джереми Даунса (3-я серия), которого Декстер
+                            не убил, а отпустил, так как тот убил парня, изнасиловавшего его.</p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">8</div>
+                    <div class="epi-poster"><img src="assets/img/posters/dexter/e8.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Психоанализ</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Декстер и Анхель фотографируют очередное место преступления. Это ванная комната, стены
+                            которой забрызганы кровью, и одно из пятен напоминает Декстеру клешни ракообразного, о чём
+                            он тут же говорит Анхелю. В ванне лежит тело женщины, покончившей с собой, а на бортике
+                            покоится пистолет. Декстер считает, что ее психолог подтолкнул ее к самоубийству и убивает
+                            его. Выясняется кто является «Ледяным убийцей». </p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">9</div>
+                    <div class="epi-poster"><img src="assets/img/posters/dexter/e9.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Отцу виднее</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Биологический отец Декстера Джозеф умер от сердечного приступа и оставил ему дом в
+                            Майами-Дейд. Декстер отправляется в морг, говорит с врачом, который показывает ему тело Джо
+                            Дрисколл, и интересуется, уверен ли врач в том, что это действительно был сердечный приступ.
+                            Оставшись в морге один, Декстер крадёт два шприца и берёт два образца крови — свой и
+                            покойника, чтобы сделать анализ ДНК и установить, действительно ли Джо Дрисколл был его
+                            биологическим отцом. </p>
+
+
+                    </div>
+                </a>
+            </div>
+            <div class="seasoninfo">
+                <h2 class="pm-section-head">О сериале</h2>
+                <p>
+                    В возрасте трёх лет Декстер Морган (Майкл Си Холл), ставший свидетелем кровавой расправы над своей
+                    матерью, был усыновлён выдающимся полицейским Майами Гарри Морганом (Джеймс Ремар), который, вовремя
+                    распознав социопатические наклонности Декстера, научил его направлять растущую жажду убийства в
+                    полезное русло — убивать только тех, кто этого заслужил: преступников, избежавших правосудия из-за
+                    лазейки в законах или нехватки улик.<br><br>
+
+                    Декстер работает в полицейском департаменте Майами экспертом по анализу брызг крови. Следуя
+                    инструкциям Гарри, Декстер искусно имитирует человеческие эмоции, чтобы не выделяться среди других
+                    людей. На протяжении сериала во флэшбэках показывается, как Гарри учит Декстера искусству выглядеть
+                    нормальным, и тот неукоснительно следует этим инструкциям, называя их «Кодексом Гарри». В
+                    соответствии с Кодексом, большинство жертв Декстера являются убийцами (но были и невинные жертвы, не
+                    считая косвенно пострадавших от действий Декстера), и обязательным правилом Декстера является
+                    обнаружение неопровержимых доказательств их вины, прежде их «наказания».<br><br>
+
+                    Красной линией через весь сюжет сериала проходят взаимоотношения между Декстером и Деброй (его
+                    сестрой). Декстер говорит в пилотной серии, что если бы он любил кого-то, то это была бы его сестра.
+                </p>
+            </div>
+        </div>
+        <div class="single-extra">
+            <h2 class="pm-section-head is-active" data-type="g1">Похожее</h2>
+            <div class="generic-grid" data-type="g1" w3-include-html="ggrid1.html"></div>
+            <h2 class="pm-section-head" data-type="g2">Анонсы</h2>
+            <div class="generic-grid" data-type="g2" w3-include-html="ggrid2.html"></div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="wrapper main-footer">
+        <p>Вопросы? <a href="/contact">Свяжитесь с нами.</a></p>
+        <div class="flexy-space">
+            <div class="col-footer">
+                <a href="#">Часто задаваемые вопросы (FAQ)</a>
+                <a href="#">Связь с инвесторами</a>
+                <a href="#">Конфиденциальность</a>
+                <a href="#">Тест скорости</a>
+            </div>
+            <div class="col-footer">
+                <a href="#">Центр помощи</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Настройки файлов cookie</a>
+                <a href="#">Юридические уведомления</a>
+            </div>
+            <div class="col-footer">
+                <a href="#">Аккаунт</a>
+                <a href="#">Способы просмотра</a>
+                <a href="#">Корпоративная информация</a>
+                <a href="#">Только на Runetflix</a>
+            </div>
+            <div class="col-footer">
+                <a href="#">Медиацентр</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Связаться с нами</a>
+            </div>
+        </div>
+        <div class="langselector">
+            <form>
+                <select>
+                    <option value="ru">Русский</option>
+
+                </select>
+            </form>
+        </div>
+        <p class="copyright">Runetflix Global</p>
+    </div>
+</footer>
+
+</body>
+<link href="assets/css/slick.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/app.js?ac=1"></script>
+<script src="assets/js/player.js"></script>
+<script>var player = new Playerjs({
+    id: "player",
+    poster: "assets/img/posters/dexter/dex_hor2.jpg",
+    file: "video/dexter_trailer.mp4"
+});
+
+$(document).ready(function () {
+    if (window.location.hash === '#watch') {
+        $('.btn.openplayer').trigger('click');
+    }
+});
+</script>
+
+</html>

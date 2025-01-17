@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>{{.Meta.Title|html}}</title>
+    <meta name="description" content="{{.Meta.Seo.Description|html}}">
+    <!--
+    <meta property="og:title" content="{{.Meta.Seo.Title|html}}">
+    <meta property="og:type" content="{{.Meta.Seo.Type}}">
+    <meta property="og:url" content="{{.Meta.SiteURL|url}}">
+    <meta property="og:image" content="{{.Meta.Seo.Image|url}}">
+    <meta property="og:image:alt" content="{{.Meta.Seo.Title|html}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png?{{antiCache}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png?{{antiCache}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png?{{antiCache}}">
+    <link rel="manifest" href="/webmanifest.json">
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content="/assets/icons/icon-512x512.png?{{antiCache}}" />
+    <meta name="twitter:image" content="/assets/icons/icon-512x512.png?{{antiCache}}" />
+    <link rel="canonical" href="{{.Meta.Canonical|url}}">-->
+    <link rel="icon" sizes="67x67" href="assets/img/favicon.svg">
+    <link href="assets/css/critical.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="wrapper wide-big">
+        <div class="hlp">
+            <div class="header-logo">
+                <a href="index.html" rel="home"><img src="assets/img/logo-runetflix.svg"
+                                                     alt="Runetflix"
+                                                     title="Runetflix" width="185" height="48"></a>
+            </div>
+
+
+            <div class="main-menu-wrap">
+                <ul class="header-menu">
+                    <li class="menu-item active"><a href="index.html">Главная</a></li>
+                    <li class="menu-item"><a href="list.html#series">Сериалы</a></li>
+                    <li class="menu-item"><a href="list.html#movies">Фильмы</a></li>
+                    <li class="menu-item"><a href="list.html#popular">Популярное</a></li>
+                    <li class="menu-item"><a href="list.html#mylist">Избранное</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hls">
+            <div id="pm-top-search">
+                <form action="/search" method="get" id="search" name="search">
+
+                    <input class="form-control" id="pm-search" size="16" name="keywords" type="text"
+                           placeholder="Поиск ..."
+                           onblur="fill();" autocomplete="off">
+
+                    <button class="btn btn-default" aria-label="search" type="submit"><i
+                            class="icon-search"></i></button>
+                </form>
+            </div>
+            <div class="search-mobile"><i class="icon-search"></i></div>
+            <a class="link-standalone" href="index.html#forkids">Для детей</a>
+            <a href="#" id="navslide-toggle"><span></span></a>
+        </div>
+    </div>
+</header>
+
+
+<div class="wrapper underhead">
+    <div class="generic-slider featured" id="slider-1" data-nav="0" data-dots="true" data-scheme="0">
+        <div class="slider-item bgcover" style="background-image: url(assets/img/posters/kalmar_hor.jpg)">
+            <div class="wrapper wide-big">
+                <div class="slide-content">
+                    <h2 class="title bold xxl acc">Игра в кальмара</h2>
+                    <div class="txxl">
+                        <p> Из-за нужды в деньгах сотни игроков принимают странное приглашение поучаствовать в детских
+                            соревнованиях. Их ждет заманчивый приз, но ставки смертельно высоки.</p>
+
+                    </div>
+                    <div class="flexy-left slidebuttons">
+                        <a href="squid.html#watch" class="btn openplayer">Смотреть</a>
+                        <a href="#fav" class="btn inverse">В избранное</a>
+                    </div>
+                </div>
+            </div>
+            <div class="agebadge">18+</div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="wrapper wide-big movieplayer">
+    <div id="player"></div>
+</div>
+
+<div class="wrapper wide-big">
+    <div class="twocol">
+        <div class="seasonlist">
+            <div class="seasonhead">
+                <h2 class="pm-section-head">Эпизоды</h2>
+                <select class="seasondrop">
+                    <option value="#seasonlink2" selected>Сезон 2</option>
+                    <option value="#seasonlink1">Сезон 1</option>
+                </select>
+            </div>
+            <div class="epilist">
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">1</div>
+                    <div class="epi-poster"><img src="assets/img/posters/squid/e01.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Хлеб и лотерея</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Сон Ки Хун покидает аэропорт, решив противостоять ведущему, стоящему за игрой. Понимая, что
+                            за ним наблюдают, он удаляет устройство слежения, имплантированное ему за ухом. Хван Чун Хо
+                            выживает после падения со скалы[a] и после реабилитации переводится на пост дорожного
+                            полицейского. Два года спустя, Ки Хун вместе с Кимом, своим бывшим ростовщиком, и его
+                            прислужниками выслеживает вербовщика игр в метро Сеула...</p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">2</div>
+                    <div class="epi-poster"><img src="assets/img/posters/squid/e02.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Вечеринка по случаю Хэллоуина</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Чун Хо находит Ки Хуна рядом с телом вербовщика и арестовывает его, однако У Сок, которого
+                            вербовщик ранее заточил в другом номере мотеля, вырубает Чун Хо огнетушителем. Ки Хун
+                            допрашивает детектива, и в итоге они (вместе с У Соком) решают объединиться, чтобы найти
+                            человека, стоящего за играми. Ки Хун, Чун Хо и Чхве У Сок обнаруживают на куртке вербовщика
+                            зацепку, указывающую на вечеринку в честь Хэллоуина...</p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">3</div>
+                    <div class="epi-poster"><img src="assets/img/posters/squid/e03.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>001</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Ки Хун просыпается в общежитии игры вместе с 455 другими игроками. Менеджер объявляет новый
+                            пункт: после каждой игры игроки будут голосовать, и если большинство согласится покинуть
+                            игры, накопленные призовые будут разделены между ними...</p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">4</div>
+                    <div class="epi-poster"><img src="assets/img/posters/squid/e04.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Шесть ног</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Игрок 001 выдумывает основанную на правде историю о причине своего присоединения к игре и
+                            говорит Ки Хуну, что он проголосовал за то, чтобы и дальше надеяться извлечь выгоду из
+                            своего опыта. Игрок 333 по имени Мён Ги подвергается нападению Таноса и игрока 124...</p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">5</div>
+                    <div class="epi-poster"><img src="assets/img/posters/squid/e05.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Ещё одна игра</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>После того, как команде Хён Джу удаётся победить благодаря взаимной поддержке, многие другие
+                            команды вдохновляются и добиваются успеха. Ки Хун вступает в союз с Чон Бэ, игроками 001,
+                            222 (Ким Чун Хи) и 388 (Кан Дэ Хо); им это удаётся, и после игры они обмениваются именами,
+                            хотя игрок 001 ложно представляется как О Ён Иль...</p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">6</div>
+                    <div class="epi-poster"><img src="assets/img/posters/squid/e06.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>O X</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Во время игры «Третий лишний» игроки изо всех сил пытаются разместить свои альянсы в
+                            комнатах, вызывая напряжённость среди многих, предательство и смерть союзников. В последнем
+                            раунде Чон Бэ становится свидетелем того, как игрок 001 убивает другого игрока, чтобы
+                            обеспечить себе комнату...</p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">7</div>
+                    <div class="epi-poster"><img src="assets/img/posters/squid/e07.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Друг или враг</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Капитан Пак из команды Чун Хо оказывается двойным агентом, выводит из строя их поисковый дрон
+                            и убивает одного из наёмников. После драки в туалете игроки понимают, что могут убивать
+                            других, чтобы увеличить призовой фонд и ослабить избирателей противника...</p>
+
+
+                    </div>
+                </a>
+            </div>
+            <div class="seasoninfo">
+                <h2 class="pm-section-head">О сериале</h2>
+                <p>
+                    «Игра в кальмара» стала первым корейским драматическим сериалом, возглавившим еженедельный рейтинг
+                    десяти самых просматриваемых сериалов Netflix во всём мире. Сериал занял первое место в 90 странах,
+                    включая США и Великобританию. За пределами Южной Кореи Netflix не вкладывал
+                    значительных средств в продвижение сериала, и его популярность была обусловлена в основном вирусным
+                    распространением в социальных сетях. Сайт Vulture также отметил, что привлечь международную
+                    аудиторию помогла языковая локализация сериала с субтитрами на 37 языках и дубляжом на 34
+                    языках. Режиссёр сериала Хван Дон Хёк так объяснил его популярность: «Людей привлекает ирония
+                    того, что отчаявшиеся взрослые рискуют жизнями, чтобы сыграть в детские игры… игры простые и лёгкие,
+                    поэтому зрители могут сфокусировать внимание на каждом персонаже, а не на сложных правилах игры».
+                </p>
+            </div>
+        </div>
+        <div class="single-extra">
+            <h2 class="pm-section-head is-active" data-type="g1">Похожее</h2>
+            <div class="generic-grid" data-type="g1" w3-include-html="ggrid1.html"></div>
+            <h2 class="pm-section-head" data-type="g2">Анонсы</h2>
+            <div class="generic-grid" data-type="g2" w3-include-html="ggrid2.html"></div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="wrapper main-footer">
+        <p>Вопросы? <a href="/contact">Свяжитесь с нами.</a></p>
+        <div class="flexy-space">
+            <div class="col-footer">
+                <a href="#">Часто задаваемые вопросы (FAQ)</a>
+                <a href="#">Связь с инвесторами</a>
+                <a href="#">Конфиденциальность</a>
+                <a href="#">Тест скорости</a>
+            </div>
+            <div class="col-footer">
+                <a href="#">Центр помощи</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Настройки файлов cookie</a>
+                <a href="#">Юридические уведомления</a>
+            </div>
+            <div class="col-footer">
+                <a href="#">Аккаунт</a>
+                <a href="#">Способы просмотра</a>
+                <a href="#">Корпоративная информация</a>
+                <a href="#">Только на Runetflix</a>
+            </div>
+            <div class="col-footer">
+                <a href="#">Медиацентр</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Связаться с нами</a>
+            </div>
+        </div>
+        <div class="langselector">
+            <form>
+                <select>
+                    <option value="ru">Русский</option>
+
+                </select>
+            </form>
+        </div>
+        <p class="copyright">Runetflix Global</p>
+    </div>
+</footer>
+
+</body>
+<link href="assets/css/slick.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/app.js?ac=1"></script>
+<script src="assets/js/player.js"></script>
+<script>var player = new Playerjs({
+    id: "player",
+    poster: "assets/img/posters/kalmar_hor2.jpg",
+    file: "video/squid_trailer.mp4"
+});
+
+$(document).ready(function () {
+    if (window.location.hash === '#watch') {
+        $('.btn.openplayer').trigger('click');
+    }
+});
+</script>
+
+</html>

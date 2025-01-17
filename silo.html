@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>{{.Meta.Title|html}}</title>
+    <meta name="description" content="{{.Meta.Seo.Description|html}}">
+    <!--
+    <meta property="og:title" content="{{.Meta.Seo.Title|html}}">
+    <meta property="og:type" content="{{.Meta.Seo.Type}}">
+    <meta property="og:url" content="{{.Meta.SiteURL|url}}">
+    <meta property="og:image" content="{{.Meta.Seo.Image|url}}">
+    <meta property="og:image:alt" content="{{.Meta.Seo.Title|html}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png?{{antiCache}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png?{{antiCache}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png?{{antiCache}}">
+    <link rel="manifest" href="/webmanifest.json">
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content="/assets/icons/icon-512x512.png?{{antiCache}}" />
+    <meta name="twitter:image" content="/assets/icons/icon-512x512.png?{{antiCache}}" />
+    <link rel="canonical" href="{{.Meta.Canonical|url}}">-->
+    <link rel="icon" sizes="67x67" href="assets/img/favicon.svg">
+    <link href="assets/css/critical.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="wrapper wide-big">
+        <div class="hlp">
+            <div class="header-logo">
+                <a href="index.html" rel="home"><img src="assets/img/logo-runetflix.svg"
+                                                     alt="Runetflix"
+                                                     title="Runetflix" width="185" height="48"></a>
+            </div>
+
+
+            <div class="main-menu-wrap">
+                <ul class="header-menu">
+                    <li class="menu-item active"><a href="index.html">Главная</a></li>
+                    <li class="menu-item"><a href="list.html#series">Сериалы</a></li>
+                    <li class="menu-item"><a href="list.html#movies">Фильмы</a></li>
+                    <li class="menu-item"><a href="list.html#popular">Популярное</a></li>
+                    <li class="menu-item"><a href="list.html#mylist">Избранное</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hls">
+            <div id="pm-top-search">
+                <form action="/search" method="get" id="search" name="search">
+
+                    <input class="form-control" id="pm-search" size="16" name="keywords" type="text"
+                           placeholder="Поиск ..."
+                           onblur="fill();" autocomplete="off">
+
+                    <button class="btn btn-default" aria-label="search" type="submit"><i
+                            class="icon-search"></i></button>
+                </form>
+            </div>
+            <div class="search-mobile"><i class="icon-search"></i></div>
+            <a class="link-standalone" href="index.html#forkids">Для детей</a>
+            <a href="#" id="navslide-toggle"><span></span></a>
+        </div>
+    </div>
+</header>
+
+
+<div class="wrapper underhead">
+    <div class="generic-slider featured" id="slider-1" data-nav="0" data-dots="true" data-scheme="0">
+        <div class="slider-item bgcover" style="background-image: url(assets/img/posters/silo_hor.jpg)">
+            <div class="wrapper wide-big">
+                <div class="slide-content">
+                    <h2 class="title bold xxl acc">Укрытие</h2>
+                    <div class="txxl">
+                        <p>В жизни нужна цель, во имя которой можно умереть.</p>
+                        <p>На отравленной гибнущей планете будущего тысячи людей ютятся в огромном подземном укрытии.
+                            Нарушение шерифом основного правила и серия загадочных смертей вынуждают инженера Джульетту
+                            заняться раскрытием тайн и поиском правды о бункере.</p>
+
+                    </div>
+                    <div class="flexy-left slidebuttons">
+                        <a href="#watch" class="btn openplayer">Смотреть</a>
+                        <a href="#fav" class="btn inverse">В избранное</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<div class="wrapper wide-big movieplayer">
+    <div id="player"></div>
+</div>
+
+<div class="wrapper wide-big">
+    <div class="twocol">
+        <div class="seasonlist">
+            <div class="seasonhead">
+                <h2 class="pm-section-head">Эпизоды</h2>
+                <select class="seasondrop">
+                    <option value="#seasonlink2" selected>Сезон 2</option>
+                    <option value="#seasonlink1">Сезон 1</option>
+                </select>
+            </div>
+            <div class="epilist">
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">1</div>
+                    <div class="epi-poster"><img src="assets/img/posters/silo/e01.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Инженер</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Во флэшбэке показаны восстание в Бункере-17 и побег его жителей во внешний мир. В настоящем
+                            времени Джульетта проникает в Бункер-17, снаружи усеянный трупами обитателей, покинувших его
+                            после восстания. Джульетта исследует верхние уровни бункера и обнаруживает, что он полностью
+                            заброшен, а нижние уровни затоплены. </p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">2</div>
+                    <div class="epi-poster"><img src="assets/img/posters/silo/e02.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Приказ</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Бернард из хранилища наблюдает через камеру костюма Джульетты, как она приближается к
+                            Бункеру-17, и картинка пропадает. Поскольку Джульетта не стала чистить линзу внешней
+                            видеокамеры, Бернард понимает, что её неповиновение может привести к революции. </p>
+
+
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">3</div>
+                    <div class="epi-poster"><img src="assets/img/posters/silo/e03.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Соло</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>В Бункере-17 Джульетта узнаёт от человека в хранилище, «Соло», что существуют десятки
+                            бункеров и что её действия могут спровоцировать революцию в её бункере. Соло даёт Джульетте
+                            еду и предлагает ей воспользоваться костюмом пожарного для возвращения в свой бункер, но
+                            обмундирование находится на затопленных уровнях.</p>
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">4</div>
+                    <div class="epi-poster"><img src="assets/img/posters/silo/e04.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Фисгармония</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>С помощью Соло Джульетта сооружает воздушный насос, который поможет ей пройти через
+                            затопленные уровни, и собирает костюм пожарного. Соло рассказывает Джульетте о внешнем мире,
+                            который был раньше, и борется с беспокойством по поводу выхода из хранилища.</p>
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">5</div>
+                    <div class="epi-poster"><img src="assets/img/posters/silo/e05.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Спуск</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Соло просит Джульетту починить водяной насос, потому что уровень воды поднимается и через
+                            десять месяцев достигнет IT-отдела, но Джульетта настаивает на том, что ей нужно немедленно
+                            вернуться в свой бункер. Она подозревает, что Соло лжёт о своей личности, и он гневно
+                            реагирует на её расспросы. </p>
+                    </div>
+                </a>
+                <a href="#episode link" class="epi-item">
+                    <div class="epi-num">6</div>
+                    <div class="epi-poster"><img src="assets/img/posters/silo/e06.jpg"></div>
+                    <div class="epi-descr">
+                        <div class="epi-title"><h4>Баррикады</h4>
+                            <div class="epi-time">44 min</div>
+                        </div>
+                        <p>Напряжение нарастает: Бернард блокирует поставки на нижние уровни, а Нокс изготавливает
+                            оружие. По просьбе Биллингса Пит отправляется на нижние уровни для лечения Патрика. Патрик
+                            рассказывает Биллингсу, как он помог Джульетте с жёстким диском и согласился на сделку с
+                            Симсом, чтобы быть агентом-провокатором на протесте на уровне Механиков. </p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="seasoninfo">
+                <h2 class="pm-section-head">О сериале</h2>
+                <p>
+                    В токсичном антиутопическом будущем, шериф Холстон следит за порядком в гигантском бункере на
+                    глубине в сотни этажей под землёй, где мужчины и женщины живут в обществе, полном правил, которые,
+                    по их мнению, призваны защитить их. Так как все ресурсы ограничены, пары могут заводить детей только
+                    при особом разрешении мэрии. Он и его жена Эллисон после множества прошений наконец получают «добро»
+                    на долгожданного ребёнка, которое действительно в течение года.
+
+                    Но на протяжении всего этого времени попытки пары зачать ребёнка остаются тщетны. В Эллисон
+                    зарождается сомнение, что всё не так однозначно, как кажется на первый взгляд, и власть имущие
+                    что-то от них скрывают. Действительно, в гигантском подземелье, которое уходит вглубь на 144 уровня,
+                    за сотни лет его существования сложились определённые касты его обитателей, хотя по закону все
+                    равны. Скептично настроенная Эллисон знакомится с компьютерщиком Джорджем, и вместе они узнают
+                    горькую правду об их «доме».
+                </p>
+            </div>
+        </div>
+        <div class="single-extra">
+            <h2 class="pm-section-head is-active" data-type="g1">Похожее</h2>
+            <div class="generic-grid" data-type="g1" w3-include-html="ggrid1.html"></div>
+            <h2 class="pm-section-head" data-type="g2">Анонсы</h2>
+            <div class="generic-grid" data-type="g2" w3-include-html="ggrid2.html"></div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="wrapper main-footer">
+        <p>Вопросы? <a href="/contact">Свяжитесь с нами.</a></p>
+        <div class="flexy-space">
+            <div class="col-footer">
+                <a href="#">Часто задаваемые вопросы (FAQ)</a>
+                <a href="#">Связь с инвесторами</a>
+                <a href="#">Конфиденциальность</a>
+                <a href="#">Тест скорости</a>
+            </div>
+            <div class="col-footer">
+                <a href="#">Центр помощи</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Настройки файлов cookie</a>
+                <a href="#">Юридические уведомления</a>
+            </div>
+            <div class="col-footer">
+                <a href="#">Аккаунт</a>
+                <a href="#">Способы просмотра</a>
+                <a href="#">Корпоративная информация</a>
+                <a href="#">Только на Runetflix</a>
+            </div>
+            <div class="col-footer">
+                <a href="#">Медиацентр</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Связаться с нами</a>
+            </div>
+        </div>
+        <div class="langselector">
+            <form>
+                <select>
+                    <option value="ru">Русский</option>
+
+                </select>
+            </form>
+        </div>
+        <p class="copyright">Runetflix Global</p>
+    </div>
+</footer>
+
+</body>
+<link href="assets/css/slick.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/app.js?ac=1"></script>
+<script src="assets/js/player.js"></script>
+<script>var player = new Playerjs({
+    id: "player",
+    poster: "assets/img/posters/silo_hor2.jpg",
+    file: "video/silo_trailer.mp4"
+});
+
+$(document).ready(function () {
+    if (window.location.hash === '#watch') {
+        $('.btn.openplayer').trigger('click');
+    }
+});
+</script>
+
+</html>
